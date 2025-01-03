@@ -16,6 +16,7 @@ const bsf = (graph, first) => {
 
     while (queue.length > 0) {
         let visiting = queue.shift();
+        console.log(visiting);
         for (const neighbour of graph[visiting]) {
             if (!visited.has(neighbour)) {
                 queue.push(neighbour);
@@ -24,3 +25,5 @@ const bsf = (graph, first) => {
         }
     }
 }
+
+bsf(graph, 0);
